@@ -1,0 +1,10 @@
+{
+  "source": "Fictional example data created for this MVP; not an official source",
+  "synthetic": true,
+  "retrievedAt": null,
+  "schemaVersion": 1,
+  "years": [2023, 2024, 2025],
+  "rowCount": 4,
+  "sha256": "83a593c299d2da4b6b49133678566b3cd41657b78505f17e3815bb347a91e719",
+  "csvFile": "synthetic.csv"
+}
