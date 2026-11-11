@@ -1,0 +1,82 @@
+@tailwind utilities;
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color-scheme: light dark;
+  --cp-bg: #f3f6f7;
+  --cp-surface: #fff;
+  --cp-text: #172f36;
+  --cp-muted: #4c6368;
+  --cp-border: #c9d6d8;
+  --cp-accent: #006d68;
+  --cp-chart: #007d76;
+  --cp-chart-muted: #75a9a4;
+  --cp-notice: #e7f4f1;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--cp-bg); }
+.app { min-height: 100vh; color: var(--cp-text); background: var(--cp-bg); }
+@media (prefers-color-scheme: dark) {
+  .app:not([data-theme="light"]) { --cp-bg: #101f23; --cp-surface: #1a3035; --cp-text: #f0f7f6; --cp-muted: #bed0d0; --cp-border: #496065; --cp-accent: #86ded1; --cp-chart: #72cfc2; --cp-chart-muted: #568e87; --cp-notice: #203d3d; color-scheme: dark; }
+}
+.app[data-theme="dark"] { --cp-bg: #101f23; --cp-surface: #1a3035; --cp-text: #f0f7f6; --cp-muted: #bed0d0; --cp-border: #496065; --cp-accent: #86ded1; --cp-chart: #72cfc2; --cp-chart-muted: #568e87; --cp-notice: #203d3d; color-scheme: dark; }
+.app[data-theme="light"] { color-scheme: light; }
+.wrap { max-width: 1440px; margin: auto; padding-left: 32px; padding-right: 32px; }
+.topbar { background: var(--cp-surface); border-bottom: 1px solid var(--cp-border); }
+.topbar-inner { min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--cp-text); text-decoration: none; font-weight: 750; font-size: 13px; letter-spacing: .1em; }
+.brand small { display: block; font-size: 11px; font-weight: 400; letter-spacing: 0; color: var(--cp-muted); margin-top: 3px; }
+.brand-icon { display: grid; place-items: center; background: var(--cp-accent); color: var(--cp-surface); width: 38px; height: 38px; border-radius: 9px; font-size: 23px; }
+.theme-control { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+main { padding-bottom: 50px; }
+.intro { padding: 46px 0 25px; }
+.eyebrow { color: var(--cp-accent); letter-spacing: .12em; font-weight: 700; font-size: 11px; margin: 0 0 8px; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -.04em; line-height: 1.05; margin: 0; }
+h1 span { color: var(--cp-accent); }
+h2 { font-size: 1.3rem; letter-spacing: -.02em; margin: 0; }
+p { line-height: 1.5; }
+.lead { font-size: 1.1rem; color: var(--cp-muted); margin: 13px 0 0; }
+.notice { background: var(--cp-notice); border-left: 4px solid var(--cp-accent); padding: 16px 20px; margin-bottom: 25px; border-radius: 4px; }
+.notice p { margin: 5px 0 0; font-size: .9rem; }
+a { color: var(--cp-accent); }
+.panel, .metric { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 10px; }
+.panel { padding: 24px; }
+.filters { margin-bottom: 32px; }
+.section-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; margin-bottom: 18px; }
+.filter-grid { display: grid; grid-template-columns: 1fr 1.2fr 1fr 1.4fr; gap: 16px; }
+label { font-weight: 600; font-size: .86rem; }
+input, select, button { font: inherit; }
+input, select { display: block; width: 100%; margin-top: 7px; padding: 10px; border: 1px solid var(--cp-border); border-radius: 5px; background: var(--cp-surface); color: var(--cp-text); }
+.theme-control select { width: auto; margin: 0; padding: 6px; }
+button { cursor: pointer; color: var(--cp-text); background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 5px; padding: 8px 12px; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.text-button, .sort-button { color: var(--cp-accent); border: 0; padding: 0; background: transparent; font-weight: 700; text-align: left; }
+:focus-visible { outline: 3px solid #e29b1f; outline-offset: 3px; }
+.year-tag { background: var(--cp-notice); color: var(--cp-text); padding: 6px 10px; border-radius: 5px; font-size: .8rem; font-weight: 700; white-space: nowrap; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+.metric { padding: 22px; display: flex; flex-direction: column; min-height: 144px; gap: 10px; }
+.metric span, .metric small { color: var(--cp-muted); }
+.metric span { font-weight: 600; font-size: .9rem; }
+.metric strong { font-size: 2rem; letter-spacing: -.04em; }
+.metric small { font-size: .78rem; }
+.dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.muted { color: var(--cp-muted); font-size: .9rem; }
+.chart { margin: 24px 0 10px; }
+.chart-note { font-size: .8rem; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: .86rem; }
+caption { text-align: left; font-weight: 700; padding: 12px 0; }
+th, td { padding: 12px 10px; border-bottom: 1px solid var(--cp-border); vertical-align: top; }
+thead th { color: var(--cp-muted); font-size: .78rem; }
+tbody th { font-weight: 600; }
+details summary { cursor: pointer; color: var(--cp-accent); }
+details p { font-weight: 400; min-width: 180px; }
+.explorer { margin-bottom: 26px; }
+.pagination { display: flex; justify-content: flex-end; align-items: center; gap: 14px; margin-top: 20px; font-size: .85rem; }
+.empty { padding: 16px; border: 1px solid var(--cp-border); background: var(--cp-surface); border-radius: 6px; }
+.methodology { max-width: 900px; color: var(--cp-muted); font-size: .9rem; }
+.methodology h2 { color: var(--cp-text); }
+footer { border-top: 1px solid var(--cp-border); padding: 24px 0; font-size: .75rem; font-weight: 700; letter-spacing: .08em; }
+footer span { font-weight: 400; letter-spacing: 0; color: var(--cp-muted); margin-left: 15px; }
+@media (max-width: 900px) { .filter-grid { grid-template-columns: repeat(2, 1fr); } .dashboard-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .wrap { padding-left: 18px; padding-right: 18px; } .topbar-inner { min-height: 70px; } .brand small { display: none; } .theme-control { font-size: 0; } .theme-control select { font-size: 13px; } .intro { padding-top: 30px; } .filter-grid, .metrics { grid-template-columns: 1fr; } .metric { min-height: 0; } .panel { padding: 18px; } footer span { display: block; margin: 6px 0 0; } }

@@ -1,0 +1,50 @@
+{
+  "name": "gov-software",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm prepare:data && vite",
+    "build": "pnpm prepare:data && tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "prepare:data": "node scripts/prepare.mjs",
+    "typecheck": "pnpm prepare:data && tsc -b",
+    "test": "pnpm prepare:data && node --test tests/data*.test.mjs && vitest run",
+    "import": "node scripts/import.mjs",
+    "test:e2e": "playwright test"
+  },
+  "packageManager": "pnpm@10.34.9",
+  "dependencies": {
+    "decimal.js": "10.6.0",
+    "papaparse": "5.7.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "recharts": "3.10.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.0",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@types/node": "26.6.6",
+    "@types/papaparse": "5.5.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "autoprefixer": "10.6.2",
+    "eslint": "10.14.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.7",
+    "globals": "17.14.0",
+    "jsdom": "31.0.0",
+    "postcss": "8.5.32",
+    "tailwindcss": "3.4.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2",
+    "vite": "8.3.8",
+    "vite-plugin-singlefile": "2.3.4",
+    "vitest": "5.1.0"
+  }
+}

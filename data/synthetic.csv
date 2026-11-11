@@ -1,0 +1,5 @@
+agencyCode,agencyName,bureauCode,bureauName,previousUIIs,currentUII,changeInStatus,sharedServicesCategory,sharedServicesIdentifier,missionSupportInvestmentCategories,partOfITPortfolio,missionDeliveryAndManagementSupportArea,typeOfInvestment,nationalSecuritySystemIdentifier,itInfrastructureAndManagementType,investmentTitle,investmentDescription,publicUrls,FY2023 Internal Funding,FY2024 Internal Funding,FY2025 Internal Funding,FY2023 Contribution,FY2024 Contribution,FY2025 Contribution,updatedTime
+S01,Synthetic Services Department,B01,Digital Operations,,I001,Steady,,,,,,Major,,,Example Case Portal,Fictional case management system,,1.2,1.5,1.75,0,0,0,
+S01,Synthetic Services Department,B01,Digital Operations,,I002,Steady,,,,,,Non-major,,,Illustrative Data Hub,Fictional data sharing platform,,0.8,,0.95,0,0,0,
+S02,Imaginary Public Works,B02,Example Technology Office,,I003,New,,,,,,Major,,,"Demonstration Planning, Analysis",Fictional planning tool,,0,0.425,0.5,0,0,0,
+S02,Imaginary Public Works,B03,Sample Operations,,I004,06: Eliminated by funding,,,,,,Major,,,Mock Infrastructure Platform,Fictional infrastructure platform,,2.5,2.75,3,0,0,0,
